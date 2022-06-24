@@ -1,3 +1,7 @@
+//Grupo:ANNE CAROLINE MARTINS SANTOS
+//MARCELO SOARES CHIACCHIO
+//MATHEUS FELIPE MAR√áAL
+//THA√çS CAROLINE DE CARVALHO
 package projeto_social;
 
 import java.awt.BorderLayout;
@@ -178,7 +182,7 @@ public class voluntario extends JFrame {
 			public void actionPerformed(ActionEvent e) {			
 				if("".equals(txtTitulo.getText()) || "".equals(txtObjetivo.getText()) || "".equals(txtEndereco.getText()) || 
 			            "".equals(txtDtaInicio.getText()) || "".equals(txtStatus.getText())){
-			        JOptionPane.showMessageDialog(null,"N„o foram preenchidos todos os campos!","Alert",JOptionPane.WARNING_MESSAGE);     
+			        JOptionPane.showMessageDialog(null,"N√£o foram preenchidos todos os campos!","Alert",JOptionPane.WARNING_MESSAGE);     
 				}else				
 				try {
 					BufferedWriter escrever = new BufferedWriter(new FileWriter(txtTitulo.getText(),true));
@@ -187,7 +191,7 @@ public class voluntario extends JFrame {
 							   "                                                                                           "+
 									" \n\r===============Objetivo: "+txtObjetivo.getText()+
 							   "                                                                          "+
-									" \n\r===============EndereÁo: "+txtEndereco.getText()+
+									" \n\r===============Endere√ßo: "+txtEndereco.getText()+
 							   "                                                                                "+
 									" \n\r===============Data de inicio: "+txtDtaInicio.getText()+
 							   "                                                                                      "+
@@ -262,7 +266,7 @@ public class voluntario extends JFrame {
 		
 		JComboBox comboBox = new JComboBox();
 		comboBox.setBackground(Color.LIGHT_GRAY);
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"", "Em execÌcio", "Parado", "ConcluÌdo"}));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"", "Em exec√≠cio", "Parado", "Conclu√≠do"}));
 		
 		comboBox.setBounds(169, 49, 214, 22);
 		agenda.add(comboBox);
@@ -290,14 +294,14 @@ public class voluntario extends JFrame {
 																		"                                                                                                           "+
 																		" \n\r===============Hora: "+hora_1.getText()+
 																		"                                                                                                                     "+
-																		" \n\r===============SituaÁ„o: "+comboBox.getSelectedItem()+
+																		" \n\r===============Situa√ß√£o: "+comboBox.getSelectedItem()+
 																		"                                                                                                       "+
-																		" \n\r===============DescriÁ„o: "+descricao.getText());
+																		" \n\r===============Descri√ß√£o: "+descricao.getText());
 				arquivotxt.append(Agendas.toString().replaceAll("\\[|\\]", "").replaceAll(", ",", "));
 
 				
 				JOptionPane.showMessageDialog(null, "Agenda salva!");
-				String option = JOptionPane.showInputDialog("Cadastrar outra agenda? \n1-Sim 2-N„o");
+				String option = JOptionPane.showInputDialog("Cadastrar outra agenda? \n1-Sim 2-N√£o");
 				if(option.equals("1")){
 					comboBox.setSelectedIndex(0);
 					data_1.setText("");
